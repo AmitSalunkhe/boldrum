@@ -3,7 +3,7 @@ import 'package:adobe_xd/pinned.dart';
 
 class XDOrdersawaitingapprovalscreen extends StatelessWidget {
   XDOrdersawaitingapprovalscreen({
-    Key? key,
+    Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {

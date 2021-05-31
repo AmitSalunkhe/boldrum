@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class XDLOGIN1 extends StatelessWidget {
   XDLOGIN1({
-    Key? key,
+    Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -15,294 +15,277 @@ class XDLOGIN1 extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
-            Pin(start: 44.0, end: 34.0),
-            Pin(start: 78.0, end: 33.0),
-            child:
-                // Adobe XD layer: 'Login screen' (group)
-                Stack(
-              children: <Widget>[
-                Container(),
-                Pinned.fromPins(
-                  Pin(size: 119.0, middle: 0.5),
-                  Pin(size: 5.0, end: 0.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xffff1c35),
-                    ),
-                  ),
+            Pin(start: 48.0, end: 38.0),
+            Pin(start: 353.0, end: 442.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(28.0),
+                color: const Color(0xffff1c35),
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 40.0, middle: 0.5156),
+            Pin(size: 21.0, middle: 0.4458),
+            child: Text(
+              'Login',
+              style: TextStyle(
+                fontFamily: 'Metropolis',
+                fontSize: 16,
+                color: const Color(0xffe8f1e2),
+                fontWeight: FontWeight.w700,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 119.0, middle: 0.5182),
+            Pin(size: 5.0, end: 33.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: const Color(0xffff1c35),
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 74.0, middle: 0.5172),
+            Pin(size: 40.0, start: 78.0),
+            child: Text(
+              'Login',
+              style: TextStyle(
+                fontFamily: 'Metropolis',
+                fontSize: 30,
+                color: const Color(0xff4a4b4d),
+                fontWeight: FontWeight.w700,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(start: 48.0, end: 38.0),
+            Pin(start: 269.0, end: 526.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(28.0),
+                color: const Color(0xfff2f2f2),
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 58.0, start: 82.0),
+            Pin(size: 19.0, middle: 0.345),
+            child: Text(
+              'Password',
+              style: TextStyle(
+                fontFamily: 'Metropolis',
+                fontSize: 14,
+                color: const Color(0xffb6b7b7),
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 142.0, middle: 0.5219),
+            Pin(size: 19.0, middle: 0.5204),
+            child: Text(
+              'Forgot your password?',
+              style: TextStyle(
+                fontFamily: 'Metropolis',
+                fontSize: 14,
+                color: const Color(0xff7c7d7e),
+                fontWeight: FontWeight.w500,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 202.0, middle: 0.5288),
+            Pin(size: 19.0, end: 63.0),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.PushLeft,
+                  ease: Curves.easeInOutExpo,
+                  duration: 1.0,
+                  pageBuilder: () => XDSIGN_UP(),
                 ),
-                Pinned.fromPins(
-                  Pin(size: 74.0, middle: 0.5021),
-                  Pin(size: 40.0, start: 0.0),
-                  child: Text(
-                    'Login',
-                    style: TextStyle(
-                      fontFamily: 'Metropolis',
-                      fontSize: 30,
-                      color: const Color(0xff4a4b4d),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Container(),
-                Pinned.fromPins(
-                  Pin(size: 142.0, middle: 0.5029),
-                  Pin(size: 19.0, middle: 0.4924),
-                  child: Text(
-                    'Forgot your password?',
-                    style: TextStyle(
-                      fontFamily: 'Metropolis',
-                      fontSize: 14,
-                      color: const Color(0xff7c7d7e),
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 202.0, middle: 0.5044),
-                  Pin(size: 19.0, end: 30.0),
-                  child: PageLink(
-                    links: [
-                      PageLinkInfo(
-                        transition: LinkTransition.PushLeft,
-                        ease: Curves.easeInOutExpo,
-                        duration: 1.0,
-                        pageBuilder: () => XDSIGN_UP(),
-                      ),
-                    ],
-                    child: Text.rich(
-                      TextSpan(
-                        style: TextStyle(
-                          fontFamily: 'Metropolis',
-                          fontSize: 14,
-                          color: const Color(0xffff1c35),
-                        ),
-                        children: [
-                          TextSpan(
-                            text: 'Don\'t have an Account? ',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          TextSpan(
-                            text: 'Sign Up',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        ],
-                      ),
-                      textHeightBehavior:
-                          TextHeightBehavior(applyHeightToFirstAscent: false),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 84.0, middle: 0.5022),
-                  Pin(size: 19.0, middle: 0.5867),
-                  child: Text(
-                    'or Login With',
-                    style: TextStyle(
-                      fontFamily: 'Metropolis',
-                      fontSize: 14,
-                      color: const Color(0xff7c7d7e),
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 56.0, middle: 0.807),
-                  child:
-                      // Adobe XD layer: 'google_login' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(28.0),
-                            color: const Color(0xffdd4b39),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xffdd4b39)),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(startFraction: 0.3968, endFraction: 0.2857),
-                        Pin(size: 16.0, middle: 0.475),
-                        child:
-                            // Adobe XD layer: 'Login with Google' (text)
-                            Text(
-                          'Login with Google',
-                          style: TextStyle(
-                            fontFamily: 'Metropolis',
-                            fontSize: 12,
-                            color: const Color(0xffffffff),
-                            letterSpacing: 0.24,
-                            fontWeight: FontWeight.w500,
-                            height: 1,
-                          ),
-                          textHeightBehavior: TextHeightBehavior(
-                              applyHeightToFirstAscent: false),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 19.2, middle: 0.284),
-                        Pin(size: 12.0, middle: 0.5002),
-                        child:
-                            // Adobe XD layer: 'google-plus-logo' (group)
-                            Stack(
-                          children: <Widget>[
-                            Pinned.fromPins(
-                              Pin(size: 6.0, end: 0.0),
-                              Pin(size: 6.0, middle: 0.4),
-                              child: Stack(
-                                children: <Widget>[
-                                  Pinned.fromPins(
-                                    Pin(start: 0.0, end: 0.0),
-                                    Pin(start: 0.0, end: 0.0),
-                                    child: Stack(
-                                      children: <Widget>[
-                                        Pinned.fromPins(
-                                          Pin(start: 0.0, end: 0.0),
-                                          Pin(start: 0.0, end: 0.0),
-                                          child: SvgPicture.string(
-                                            _svg_dnjpgj,
-                                            allowDrawingOutsideViewBox: true,
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Pinned.fromPins(
-                              Pin(size: 12.0, start: 0.0),
-                              Pin(start: 0.0, end: 0.0),
-                              child: Stack(
-                                children: <Widget>[
-                                  Pinned.fromPins(
-                                    Pin(start: 0.0, end: 0.0),
-                                    Pin(start: 0.0, end: 0.0),
-                                    child: Stack(
-                                      children: <Widget>[
-                                        Pinned.fromPins(
-                                          Pin(start: 0.0, end: 0.0),
-                                          Pin(start: 0.0, end: 0.0),
-                                          child: SvgPicture.string(
-                                            _svg_90xke,
-                                            allowDrawingOutsideViewBox: true,
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 55.0, middle: 0.6847),
-                  child:
-                      // Adobe XD layer: 'facebook_login' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(start: 0.0, end: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Rectangle ' (shape)
-                            Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(28.0),
-                            color: const Color(0xff367fc0),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff367fc0)),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(startFraction: 0.3641, endFraction: 0.274),
-                        Pin(size: 16.0, middle: 0.4872),
-                        child:
-                            // Adobe XD layer: 'Login with Facebook' (text)
-                            Text(
-                          'Login with Facebook',
-                          style: TextStyle(
-                            fontFamily: 'Metropolis',
-                            fontSize: 12,
-                            color: const Color(0xffffffff),
-                            letterSpacing: 0.24,
-                            fontWeight: FontWeight.w500,
-                            height: 1,
-                          ),
-                          textHeightBehavior: TextHeightBehavior(
-                              applyHeightToFirstAscent: false),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 7.3, middle: 0.2438),
-                        Pin(size: 15.7, middle: 0.5091),
-                        child:
-                            // Adobe XD layer: 'facebook-letter-logo' (group)
-                            Stack(
-                          children: <Widget>[
-                            Pinned.fromPins(
-                              Pin(start: 0.0, end: 0.0),
-                              Pin(start: 0.0, end: 0.0),
-                              child:
-                                  // Adobe XD layer: 'Facebook' (shape)
-                                  SvgPicture.string(
-                                _svg_fpe4tc,
-                                allowDrawingOutsideViewBox: true,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 152.0, middle: 0.5031),
-                  Pin(size: 19.0, start: 52.0),
-                  child: Text(
-                    'Add your details to login',
-                    style: TextStyle(
-                      fontFamily: 'Metropolis',
-                      fontSize: 14,
-                      color: const Color(0xff7c7d7e),
-                      fontWeight: FontWeight.w500,
-                      height: 1.4285714285714286,
-                    ),
-                    textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Container(),
               ],
+              child: Text.rich(
+                TextSpan(
+                  style: TextStyle(
+                    fontFamily: 'Metropolis',
+                    fontSize: 14,
+                    color: const Color(0xffff1c35),
+                  ),
+                  children: [
+                    TextSpan(
+                      text: 'Don\'t have an Account? ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'Sign Up',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
+                textHeightBehavior:
+                    TextHeightBehavior(applyHeightToFirstAscent: false),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 84.0, middle: 0.5178),
+            Pin(size: 19.0, middle: 0.6022),
+            child: Text(
+              'or Login With',
+              style: TextStyle(
+                fontFamily: 'Metropolis',
+                fontSize: 14,
+                color: const Color(0xff7c7d7e),
+                fontWeight: FontWeight.w500,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(start: 44.0, end: 34.0),
+            Pin(size: 56.0, middle: 0.7925),
+            child:
+                // Adobe XD layer: 'Rectangle' (shape)
+                Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(28.0),
+                color: const Color(0xffdd4b39),
+                border: Border.all(width: 1.0, color: const Color(0xffdd4b39)),
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(startFraction: 0.43, endFraction: 0.3155),
+            Pin(size: 16.0, middle: 0.7772),
+            child:
+                // Adobe XD layer: 'Login with Google' (text)
+                Text(
+              'Login with Google',
+              style: TextStyle(
+                fontFamily: 'Metropolis',
+                fontSize: 12,
+                color: const Color(0xffffffff),
+                letterSpacing: 0.24,
+                fontWeight: FontWeight.w500,
+                height: 1,
+              ),
+              textHeightBehavior:
+                  TextHeightBehavior(applyHeightToFirstAscent: false),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 6.0, middle: 0.3649),
+            Pin(size: 6.0, middle: 0.7744),
+            child: SvgPicture.string(
+              _svg_k3k56w,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 12.0, middle: 0.336),
+            Pin(size: 12.0, middle: 0.7771),
+            child: SvgPicture.string(
+              _svg_irx2fz,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(start: 44.0, end: 34.0),
+            Pin(size: 55.0, middle: 0.6872),
+            child:
+                // Adobe XD layer: 'Rectangle ' (shape)
+                Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(28.0),
+                color: const Color(0xff367fc0),
+                border: Border.all(width: 1.0, color: const Color(0xff367fc0)),
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(startFraction: 0.4038, endFraction: 0.3061),
+            Pin(size: 16.0, middle: 0.6778),
+            child:
+                // Adobe XD layer: 'Login with Facebook' (text)
+                Text(
+              'Login with Facebook',
+              style: TextStyle(
+                fontFamily: 'Metropolis',
+                fontSize: 12,
+                color: const Color(0xffffffff),
+                letterSpacing: 0.24,
+                fontWeight: FontWeight.w500,
+                height: 1,
+              ),
+              textHeightBehavior:
+                  TextHeightBehavior(applyHeightToFirstAscent: false),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 7.3, middle: 0.3086),
+            Pin(size: 15.7, middle: 0.6788),
+            child:
+                // Adobe XD layer: 'Facebook' (shape)
+                SvgPicture.string(
+              _svg_xyx6u,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 152.0, middle: 0.5228),
+            Pin(size: 19.0, start: 130.0),
+            child: Text(
+              'Add your details to login',
+              style: TextStyle(
+                fontFamily: 'Metropolis',
+                fontSize: 14,
+                color: const Color(0xff7c7d7e),
+                fontWeight: FontWeight.w500,
+                height: 1.4285714285714286,
+              ),
+              textHeightBehavior:
+                  TextHeightBehavior(applyHeightToFirstAscent: false),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(start: 48.0, end: 38.0),
+            Pin(start: 185.0, end: 610.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(28.0),
+                color: const Color(0xfff2f2f2),
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 64.0, start: 82.0),
+            Pin(size: 19.0, middle: 0.244),
+            child: Text(
+              'Your Email',
+              style: TextStyle(
+                fontFamily: 'Metropolis',
+                fontSize: 14,
+                color: const Color(0xffb6b7b7),
+              ),
+              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromPins(
@@ -619,12 +602,12 @@ class XDLOGIN1 extends StatelessWidget {
   }
 }
 
-const String _svg_dnjpgj =
-    '<svg viewBox="0.0 0.0 6.0 6.0" ><path transform="translate(-352.0, -160.0)" d="M 355.6040649414063 162.4026947021484 L 355.6040649414063 160 L 354.4027099609375 160 L 354.4027099609375 162.4026947021484 L 352 162.4026947021484 L 352 163.6040496826172 L 354.4027099609375 163.6040496826172 L 354.4027099609375 166.0067596435547 L 355.6040649414063 166.0067596435547 L 355.6040649414063 163.6040496826172 L 358.0067749023438 163.6040496826172 L 358.0067749023438 162.4026947021484 L 355.6040649414063 162.4026947021484 Z" fill="#ffffff" stroke="#ffffff" stroke-width="0.30000001192092896" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
-const String _svg_90xke =
-    '<svg viewBox="0.0 0.0 12.0 12.0" ><path transform="translate(0.0, -96.0)" d="M 6.006744384765625 100.8053970336914 L 6.006744384765625 103.2080917358398 L 9.405361175537109 103.2080917358398 C 8.909202575683594 104.6064605712891 7.57330322265625 105.6107864379883 6.006744384765625 105.6107864379883 C 4.019712924957275 105.6107864379883 2.402697801589966 103.9937744140625 2.402697801589966 102.0067443847656 C 2.402697801589966 100.0197143554688 4.019712924957275 98.40269470214844 6.006744384765625 98.40269470214844 C 6.868111610412598 98.40269470214844 7.697042942047119 98.71144866943359 8.340965270996094 99.27247619628906 L 9.919537544250488 97.46083831787109 C 8.838324546813965 96.51898193359375 7.449564933776855 96 6.006744384765625 96 C 2.694625377655029 96 0 98.69462585449219 0 102.0067443847656 C 0 105.3188629150391 2.694625377655029 108.0134887695313 6.006744384765625 108.0134887695313 C 9.318863868713379 108.0134887695313 12.01348876953125 105.3188629150391 12.01348876953125 102.0067443847656 L 12.01348876953125 100.8053970336914 L 6.006744384765625 100.8053970336914 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
-const String _svg_fpe4tc =
-    '<svg viewBox="0.0 0.0 7.3 15.7" ><path transform="translate(-114.7, 0.0)" d="M 116.2808532714844 3.04389762878418 C 116.2808532714844 3.439844131469727 116.2808532714844 5.207121849060059 116.2808532714844 5.207121849060059 L 114.6959991455078 5.207121849060059 L 114.6959991455078 7.852320194244385 L 116.2808532714844 7.852320194244385 L 116.2808532714844 15.71292018890381 L 119.5364990234375 15.71292018890381 L 119.5364990234375 7.8525390625 L 121.7211761474609 7.8525390625 C 121.7211761474609 7.8525390625 121.92578125 6.584187030792236 122.0249633789063 5.197368621826172 C 121.7406158447266 5.197368621826172 119.5488128662109 5.197368621826172 119.5488128662109 5.197368621826172 C 119.5488128662109 5.197368621826172 119.5488128662109 3.658475399017334 119.5488128662109 3.388739585876465 C 119.5488128662109 3.118418455123901 119.9037628173828 2.75480055809021 120.2546081542969 2.75480055809021 C 120.6047821044922 2.75480055809021 121.3438720703125 2.75480055809021 122.0283966064453 2.75480055809021 C 122.0283966064453 2.394652843475342 122.0283966064453 1.150264382362366 122.0283966064453 0.0009992015548050404 C 121.1145629882813 0.0009992015548050404 120.0749130249023 0.0009992015548050404 119.6166458129883 0.0009992015548050404 C 116.2003936767578 0.0008165724575519562 116.2808532714844 2.648644924163818 116.2808532714844 3.04389762878418 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
+const String _svg_k3k56w =
+    '<svg viewBox="141.2 654.4 6.0 6.0" ><path transform="translate(-210.79, 494.4)" d="M 355.6040649414063 162.4026947021484 L 355.6040649414063 160 L 354.4027099609375 160 L 354.4027099609375 162.4026947021484 L 352 162.4026947021484 L 352 163.6040496826172 L 354.4027099609375 163.6040496826172 L 354.4027099609375 166.0067596435547 L 355.6040649414063 166.0067596435547 L 355.6040649414063 163.6040496826172 L 358.0067749023438 163.6040496826172 L 358.0067749023438 162.4026947021484 L 355.6040649414063 162.4026947021484 Z" fill="#ffffff" stroke="#ffffff" stroke-width="0.30000001192092896" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
+const String _svg_irx2fz =
+    '<svg viewBox="128.0 652.0 12.0 12.0" ><path transform="translate(128.0, 556.0)" d="M 6.006744384765625 100.8053970336914 L 6.006744384765625 103.2080917358398 L 9.405361175537109 103.2080917358398 C 8.909202575683594 104.6064605712891 7.57330322265625 105.6107864379883 6.006744384765625 105.6107864379883 C 4.019712924957275 105.6107864379883 2.402697801589966 103.9937744140625 2.402697801589966 102.0067443847656 C 2.402697801589966 100.0197143554688 4.019712924957275 98.40269470214844 6.006744384765625 98.40269470214844 C 6.868111610412598 98.40269470214844 7.697042942047119 98.71144866943359 8.340965270996094 99.27247619628906 L 9.919537544250488 97.46083831787109 C 8.838324546813965 96.51898193359375 7.449564933776855 96 6.006744384765625 96 C 2.694625377655029 96 0 98.69462585449219 0 102.0067443847656 C 0 105.3188629150391 2.694625377655029 108.0134887695313 6.006744384765625 108.0134887695313 C 9.318863868713379 108.0134887695313 12.01348876953125 105.3188629150391 12.01348876953125 102.0067443847656 L 12.01348876953125 100.8053970336914 L 6.006744384765625 100.8053970336914 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
+const String _svg_xyx6u =
+    '<svg viewBox="119.0 567.0 7.3 15.7" ><path transform="translate(4.3, 567.0)" d="M 116.2808532714844 3.04389762878418 C 116.2808532714844 3.439844131469727 116.2808532714844 5.207121849060059 116.2808532714844 5.207121849060059 L 114.6959991455078 5.207121849060059 L 114.6959991455078 7.852320194244385 L 116.2808532714844 7.852320194244385 L 116.2808532714844 15.71292018890381 L 119.5364990234375 15.71292018890381 L 119.5364990234375 7.8525390625 L 121.7211761474609 7.8525390625 C 121.7211761474609 7.8525390625 121.92578125 6.584187030792236 122.0249633789063 5.197368621826172 C 121.7406158447266 5.197368621826172 119.5488128662109 5.197368621826172 119.5488128662109 5.197368621826172 C 119.5488128662109 5.197368621826172 119.5488128662109 3.658475399017334 119.5488128662109 3.388739585876465 C 119.5488128662109 3.118418455123901 119.9037628173828 2.75480055809021 120.2546081542969 2.75480055809021 C 120.6047821044922 2.75480055809021 121.3438720703125 2.75480055809021 122.0283966064453 2.75480055809021 C 122.0283966064453 2.394652843475342 122.0283966064453 1.150264382362366 122.0283966064453 0.0009992015548050404 C 121.1145629882813 0.0009992015548050404 120.0749130249023 0.0009992015548050404 119.6166458129883 0.0009992015548050404 C 116.2003936767578 0.0008165724575519562 116.2808532714844 2.648644924163818 116.2808532714844 3.04389762878418 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_lz3aa0 =
     '<svg viewBox="0.0 0.0 7.2 9.8" ><path transform="translate(-26.02, -18.33)" d="M 29.41971588134766 28.09014129638672 C 28.5684871673584 28.09014129638672 27.84483337402344 27.85918998718262 27.24765205383301 27.39728164672852 C 26.65047073364258 26.93537521362305 26.28314590454102 26.32279586791992 26.14567184448242 25.55735015869141 L 27.80193901062012 25.55735015869141 C 27.90971946716309 25.91037940979004 28.10767936706543 26.18862342834473 28.39801979064941 26.39208221435547 C 28.68836212158203 26.59664154052734 29.0325927734375 26.69782066345215 29.43291282653809 26.69782066345215 C 30.11147499084473 26.69782066345215 30.64157104492188 26.398681640625 31.02429389953613 25.79930114746094 C 31.40591430664063 25.19992065429688 31.59727478027344 24.36738777160645 31.59727478027344 23.30280303955078 L 31.54008865356445 23.30280303955078 L 31.50709915161133 23.30280303955078 L 31.48839950561523 23.30280303955078 C 31.2684440612793 23.74491310119629 30.94841003417969 24.08694458007813 30.52829170227051 24.32999610900879 C 30.10707855224609 24.57304763793945 29.6231746673584 24.69402313232422 29.07768249511719 24.69402313232422 C 28.19346237182617 24.69402313232422 27.46210861206055 24.40258026123047 26.88362503051758 23.81749725341797 C 26.30624198913574 23.2335147857666 26.01699829101563 22.49446487426758 26.01699829101563 21.60144424438477 C 26.01699829101563 20.64793395996094 26.34033393859863 19.86489295959473 26.98700332641602 19.25231742858887 C 27.6336727142334 18.63973617553711 28.46180725097656 18.33399963378906 29.47140693664551 18.33399963378906 C 30.14996910095215 18.33399963378906 30.75154876708984 18.49126625061035 31.27504348754883 18.8047046661377 C 31.79963684082031 19.11814308166504 32.21865463256836 19.57345199584961 32.53208923339844 20.17062950134277 C 32.96980667114258 20.94817352294922 33.18975830078125 21.92807769775391 33.18975830078125 23.1092414855957 C 33.18975830078125 24.67312812805176 32.85652542114258 25.89388275146484 32.19005966186523 26.77260589599609 C 31.52469635009766 27.65132904052734 30.60087776184082 28.09014129638672 29.41971588134766 28.09014129638672 Z M 28.16266822814941 22.86069107055664 C 28.50689888000488 23.20272254943848 28.94461250305176 23.37318801879883 29.47800445556641 23.37318801879883 C 30.01029777526855 23.37318801879883 30.45021057128906 23.20382118225098 30.7988395690918 22.86399078369141 C 31.1463680267334 22.52525901794434 31.32013702392578 22.09524536132813 31.32013702392578 21.57504844665527 C 31.32013702392578 21.05155372619629 31.1441707611084 20.61054039001465 30.79223823547363 20.25421333312988 C 30.44030952453613 19.89788436889648 30.00369834899902 19.7197208404541 29.4835033416748 19.7197208404541 C 28.96440696716309 19.7197208404541 28.52779197692871 19.89458656311035 28.17586517333984 20.24431419372559 C 27.82393455505371 20.59514617919922 27.64797210693359 21.0295581817627 27.64797210693359 21.54975509643555 C 27.64797210693359 22.08204650878906 27.81953620910645 22.5197582244873 28.16266822814941 22.86069107055664 Z" fill="#4a4b4d" stroke="none" stroke-width="1" stroke-miterlimit="10" stroke-linecap="butt" /></svg>';
 const String _svg_xf0xsj =

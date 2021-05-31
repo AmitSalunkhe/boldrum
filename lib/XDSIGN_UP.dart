@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class XDSIGN_UP extends StatelessWidget {
   XDSIGN_UP({
-    Key? key,
+    Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {

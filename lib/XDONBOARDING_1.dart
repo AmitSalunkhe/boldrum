@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class XDONBOARDING_1 extends StatelessWidget {
   XDONBOARDING_1({
-    Key? key,
+    Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -75,7 +75,7 @@ class XDONBOARDING_1 extends StatelessWidget {
                 Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage(''),
+                  image: const AssetImage('assets/images/OB1.png'),
                   fit: BoxFit.fill,
                 ),
               ),

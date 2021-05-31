@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class XDRESET_PASSWORD_2 extends StatelessWidget {
   XDRESET_PASSWORD_2({
-    Key? key,
+    Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {

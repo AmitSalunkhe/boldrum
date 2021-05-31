@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class XDHOME_SCREEN_USER_BOARD_MEMBER_SCREEN extends StatelessWidget {
   XDHOME_SCREEN_USER_BOARD_MEMBER_SCREEN({
-    Key? key,
+    Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {

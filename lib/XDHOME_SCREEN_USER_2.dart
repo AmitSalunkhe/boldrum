@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class XDHOME_SCREEN_USER_2 extends StatelessWidget {
   XDHOME_SCREEN_USER_2({
-    Key? key,
+    Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
