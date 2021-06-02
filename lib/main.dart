@@ -1,6 +1,8 @@
-import 'package:boldrum/XDLOGIN1.dart';
-import 'package:boldrum/XDONBOARDING_1.dart';
 import 'package:flutter/material.dart';
+import 'package:boldrum/routes.dart';
+import 'package:boldrum/screens/profile/profile_screen.dart';
+import 'package:boldrum/screens/splash/splash_screen.dart';
+import 'package:boldrum/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,20 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: XDONBOARDING_1(),
+      theme: theme(),
+      // home: SplashScreen(),
+      // We use routeName so that we dont need to remember the name
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }
