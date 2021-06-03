@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:boldrum/routes.dart';
-import 'package:boldrum/screens/profile/profile_screen.dart';
-import 'package:boldrum/screens/splash/splash_screen.dart';
-import 'package:boldrum/theme.dart';
+import 'package:boldrum/on_boarding1/on_boarding1_widget.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,12 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: theme(),
-      // home: SplashScreen(),
-      // We use routeName so that we dont need to remember the name
-      initialRoute: SplashScreen.routeName,
-      routes: routes,
+      title: 'boldrum',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: OnBoarding1Widget(),
     );
   }
 }
