@@ -1,5 +1,5 @@
+import 'package:boldrum/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:boldrum/on_boarding1/on_boarding1_widget.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'boldrum',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: OnBoarding1Widget(),
+      home: SplashScreen(),
     );
   }
 }

@@ -1,5 +1,5 @@
 name: boldrum
-description: A new Flutter project. Developed By Amit Salunkhe
+description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -27,6 +27,10 @@ dependencies:
   cached_network_image: 2.5.1
   font_awesome_flutter:
   google_fonts:
+  intl:
+  page_transition:
+  smooth_page_indicator:
+  timeago:
   url_launcher:
 
 

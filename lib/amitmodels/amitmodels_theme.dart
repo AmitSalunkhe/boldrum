@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: avoid_classes_with_only_static_members
-class FlutterFlowTheme {
+class AmitmodelsTheme {
   static const Color primaryColor = Color(0xFFCD151D);
   static const Color secondaryColor = Color(0xFFFF1C35);
   static const Color tertiaryColor = Color(0xFFFFFFFF);

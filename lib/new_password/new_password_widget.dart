@@ -1,4 +1,5 @@
 import '../amitmodels/amitmodels_theme.dart';
+import '../amitmodels/amitmodels_util.dart';
 import '../amitmodels/amitmodels_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,6 +14,7 @@ class NewPasswordWidget extends StatefulWidget {
 class _NewPasswordWidgetState extends State<NewPasswordWidget> {
   TextEditingController txtConfirmPasswordController;
   TextEditingController txtNewPasswordController;
+  bool passwordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -20,6 +22,7 @@ class _NewPasswordWidgetState extends State<NewPasswordWidget> {
     super.initState();
     txtConfirmPasswordController = TextEditingController();
     txtNewPasswordController = TextEditingController();
+    passwordVisibility = false;
   }
 
   @override
@@ -44,7 +47,7 @@ class _NewPasswordWidgetState extends State<NewPasswordWidget> {
                     padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                     child: Text(
                       'New Password',
-                      style: FlutterFlowTheme.title1.override(
+                      style: AmitmodelsTheme.title1.override(
                         fontFamily: 'Poppins',
                         fontSize: 32,
                         fontWeight: FontWeight.normal,
@@ -54,7 +57,7 @@ class _NewPasswordWidgetState extends State<NewPasswordWidget> {
                   Text(
                     'Please enter your email to receive a \nlink to  create a new password via email',
                     textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: AmitmodelsTheme.bodyText1.override(
                       fontFamily: 'Poppins',
                       fontSize: 12,
                       fontWeight: FontWeight.w300,
@@ -77,15 +80,15 @@ class _NewPasswordWidgetState extends State<NewPasswordWidget> {
                   children: [
                     TextFormField(
                       controller: txtNewPasswordController,
-                      obscureText: true,
+                      obscureText: !passwordVisibility,
                       decoration: InputDecoration(
                         hintText: 'New  Password',
-                        hintStyle: FlutterFlowTheme.bodyText1.override(
+                        hintStyle: AmitmodelsTheme.bodyText1.override(
                           fontFamily: 'Poppins',
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.transparent,
+                            color: Color(0x00000000),
                             width: 1,
                           ),
                           borderRadius: BorderRadius.only(
@@ -97,7 +100,7 @@ class _NewPasswordWidgetState extends State<NewPasswordWidget> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.transparent,
+                            color: Color(0x00000000),
                             width: 1,
                           ),
                           borderRadius: BorderRadius.only(
@@ -110,22 +113,33 @@ class _NewPasswordWidgetState extends State<NewPasswordWidget> {
                         filled: true,
                         fillColor: Color(0xFFE9E9E9),
                         contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
+                        suffixIcon: InkWell(
+                          onTap: () => setState(
+                            () => passwordVisibility = !passwordVisibility,
+                          ),
+                          child: Icon(
+                            passwordVisibility
+                                ? Icons.visibility_outlined
+                                : Icons.visibility_off_outlined,
+                            size: 22,
+                          ),
+                        ),
                       ),
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: AmitmodelsTheme.bodyText1.override(
                         fontFamily: 'Poppins',
                       ),
                     ),
                     TextFormField(
                       controller: txtConfirmPasswordController,
-                      obscureText: true,
+                      obscureText: false,
                       decoration: InputDecoration(
                         hintText: 'Confirm Password',
-                        hintStyle: FlutterFlowTheme.bodyText1.override(
+                        hintStyle: AmitmodelsTheme.bodyText1.override(
                           fontFamily: 'Poppins',
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.transparent,
+                            color: Color(0x00000000),
                             width: 1,
                           ),
                           borderRadius: BorderRadius.only(
@@ -137,7 +151,7 @@ class _NewPasswordWidgetState extends State<NewPasswordWidget> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.transparent,
+                            color: Color(0x00000000),
                             width: 1,
                           ),
                           borderRadius: BorderRadius.only(
@@ -151,7 +165,7 @@ class _NewPasswordWidgetState extends State<NewPasswordWidget> {
                         fillColor: Color(0xFFE9E9E9),
                         contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
                       ),
-                      style: FlutterFlowTheme.bodyText1.override(
+                      style: AmitmodelsTheme.bodyText1.override(
                         fontFamily: 'Poppins',
                       ),
                     ),
@@ -163,10 +177,10 @@ class _NewPasswordWidgetState extends State<NewPasswordWidget> {
                       options: FFButtonOptions(
                         width: double.infinity,
                         height: 50,
-                        color: FlutterFlowTheme.primaryColor,
-                        textStyle: FlutterFlowTheme.subtitle2.override(
+                        color: AmitmodelsTheme.primaryColor,
+                        textStyle: AmitmodelsTheme.subtitle2.override(
                           fontFamily: 'Poppins',
-                          color: FlutterFlowTheme.tertiaryColor,
+                          color: AmitmodelsTheme.tertiaryColor,
                           fontSize: 14,
                           fontWeight: FontWeight.w300,
                         ),

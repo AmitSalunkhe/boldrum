@@ -1,4 +1,5 @@
 import '../amitmodels/amitmodels_theme.dart';
+import '../amitmodels/amitmodels_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -31,7 +32,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
               child: Text(
                 'HomeScreen',
                 textAlign: TextAlign.center,
-                style: FlutterFlowTheme.title1.override(
+                style: AmitmodelsTheme.title1.override(
                   fontFamily: 'Poppins',
                 ),
               ),

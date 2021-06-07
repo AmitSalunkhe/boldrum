@@ -1,4 +1,5 @@
 import '../amitmodels/amitmodels_theme.dart';
+import '../amitmodels/amitmodels_util.dart';
 import '../amitmodels/amitmodels_widgets.dart';
 import '../new_password/new_password_widget.dart';
 import '../signup/signup_widget.dart';
@@ -52,7 +53,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                     child: Text(
                       'We have sent an OTP to\nyour Mobile',
                       textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.title1.override(
+                      style: AmitmodelsTheme.title1.override(
                         fontFamily: 'Poppins',
                         fontSize: 20,
                         fontWeight: FontWeight.w300,
@@ -62,7 +63,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                   Text(
                     'Please check your mobile number 071*****12 \ncontinue to reset your password',
                     textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: AmitmodelsTheme.bodyText1.override(
                       fontFamily: 'Poppins',
                       fontSize: 12,
                       fontWeight: FontWeight.w300,
@@ -95,12 +96,12 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 hintText: '*',
-                                hintStyle: FlutterFlowTheme.bodyText1.override(
+                                hintStyle: AmitmodelsTheme.bodyText1.override(
                                   fontFamily: 'Poppins',
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.transparent,
+                                    color: Color(0x00000000),
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.only(
@@ -112,7 +113,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.transparent,
+                                    color: Color(0x00000000),
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.only(
@@ -126,7 +127,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                                 fillColor: Color(0xFFE9E9E9),
                                 contentPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                               ),
-                              style: FlutterFlowTheme.bodyText1.override(
+                              style: AmitmodelsTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
                               textAlign: TextAlign.center,
@@ -141,12 +142,12 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 hintText: '*',
-                                hintStyle: FlutterFlowTheme.bodyText1.override(
+                                hintStyle: AmitmodelsTheme.bodyText1.override(
                                   fontFamily: 'Poppins',
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.transparent,
+                                    color: Color(0x00000000),
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.only(
@@ -158,7 +159,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.transparent,
+                                    color: Color(0x00000000),
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.only(
@@ -172,7 +173,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                                 fillColor: Color(0xFFE9E9E9),
                                 contentPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                               ),
-                              style: FlutterFlowTheme.bodyText1.override(
+                              style: AmitmodelsTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
                               textAlign: TextAlign.center,
@@ -187,12 +188,12 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 hintText: '*',
-                                hintStyle: FlutterFlowTheme.bodyText1.override(
+                                hintStyle: AmitmodelsTheme.bodyText1.override(
                                   fontFamily: 'Poppins',
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.transparent,
+                                    color: Color(0x00000000),
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.only(
@@ -204,7 +205,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.transparent,
+                                    color: Color(0x00000000),
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.only(
@@ -218,7 +219,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                                 fillColor: Color(0xFFE9E9E9),
                                 contentPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                               ),
-                              style: FlutterFlowTheme.bodyText1.override(
+                              style: AmitmodelsTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
                               textAlign: TextAlign.center,
@@ -233,12 +234,12 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 hintText: '*',
-                                hintStyle: FlutterFlowTheme.bodyText1.override(
+                                hintStyle: AmitmodelsTheme.bodyText1.override(
                                   fontFamily: 'Poppins',
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.transparent,
+                                    color: Color(0x00000000),
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.only(
@@ -250,7 +251,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Colors.transparent,
+                                    color: Color(0x00000000),
                                     width: 1,
                                   ),
                                   borderRadius: BorderRadius.only(
@@ -264,7 +265,7 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                                 fillColor: Color(0xFFE9E9E9),
                                 contentPadding: EdgeInsets.fromLTRB(5, 0, 0, 0),
                               ),
-                              style: FlutterFlowTheme.bodyText1.override(
+                              style: AmitmodelsTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
                               textAlign: TextAlign.center,
@@ -286,10 +287,10 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                       options: FFButtonOptions(
                         width: double.infinity,
                         height: 50,
-                        color: FlutterFlowTheme.primaryColor,
-                        textStyle: FlutterFlowTheme.subtitle2.override(
+                        color: AmitmodelsTheme.primaryColor,
+                        textStyle: AmitmodelsTheme.subtitle2.override(
                           fontFamily: 'Poppins',
-                          color: FlutterFlowTheme.tertiaryColor,
+                          color: AmitmodelsTheme.tertiaryColor,
                           fontSize: 14,
                           fontWeight: FontWeight.w300,
                         ),
@@ -307,9 +308,9 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                       children: [
                         AutoSizeText(
                           'Didn\'t Receive?',
-                          style: FlutterFlowTheme.bodyText1.override(
+                          style: AmitmodelsTheme.bodyText1.override(
                             fontFamily: 'Poppins',
-                            color: FlutterFlowTheme.secondaryColor,
+                            color: AmitmodelsTheme.secondaryColor,
                             fontSize: 12,
                           ),
                         ),
@@ -326,9 +327,9 @@ class _ResetPasswordOTPWidgetState extends State<ResetPasswordOTPWidget> {
                             },
                             child: AutoSizeText(
                               'Click here',
-                              style: FlutterFlowTheme.bodyText1.override(
+                              style: AmitmodelsTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
-                                color: FlutterFlowTheme.primaryColor,
+                                color: AmitmodelsTheme.primaryColor,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w600,
                               ),

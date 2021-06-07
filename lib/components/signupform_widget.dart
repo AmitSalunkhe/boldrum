@@ -1,4 +1,5 @@
 import '../amitmodels/amitmodels_theme.dart';
+import '../amitmodels/amitmodels_util.dart';
 import '../amitmodels/amitmodels_widgets.dart';
 import '../home_screen/home_screen_widget.dart';
 import '../login/login_widget.dart';
@@ -19,6 +20,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
   TextEditingController txtNameController;
   TextEditingController txtMOBnumberController;
   TextEditingController txtPasswordController;
+  bool passwordVisibility;
   TextEditingController txtConfirmPasswordController;
 
   @override
@@ -29,6 +31,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
     txtNameController = TextEditingController();
     txtMOBnumberController = TextEditingController();
     txtPasswordController = TextEditingController();
+    passwordVisibility = false;
     txtConfirmPasswordController = TextEditingController();
   }
 
@@ -45,12 +48,12 @@ class _SignupformWidgetState extends State<SignupformWidget> {
             obscureText: false,
             decoration: InputDecoration(
               hintText: 'Name',
-              hintStyle: FlutterFlowTheme.bodyText1.override(
+              hintStyle: AmitmodelsTheme.bodyText1.override(
                 fontFamily: 'Poppins',
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -62,7 +65,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -76,7 +79,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               fillColor: Color(0xFFE9E9E9),
               contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
             ),
-            style: FlutterFlowTheme.bodyText1.override(
+            style: AmitmodelsTheme.bodyText1.override(
               fontFamily: 'Poppins',
             ),
           ),
@@ -85,12 +88,12 @@ class _SignupformWidgetState extends State<SignupformWidget> {
             obscureText: false,
             decoration: InputDecoration(
               hintText: 'Email',
-              hintStyle: FlutterFlowTheme.bodyText1.override(
+              hintStyle: AmitmodelsTheme.bodyText1.override(
                 fontFamily: 'Poppins',
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -102,7 +105,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -116,7 +119,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               fillColor: Color(0xFFE9E9E9),
               contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
             ),
-            style: FlutterFlowTheme.bodyText1.override(
+            style: AmitmodelsTheme.bodyText1.override(
               fontFamily: 'Poppins',
             ),
           ),
@@ -125,12 +128,12 @@ class _SignupformWidgetState extends State<SignupformWidget> {
             obscureText: false,
             decoration: InputDecoration(
               hintText: 'Mobile Number',
-              hintStyle: FlutterFlowTheme.bodyText1.override(
+              hintStyle: AmitmodelsTheme.bodyText1.override(
                 fontFamily: 'Poppins',
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -142,7 +145,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -156,7 +159,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               fillColor: Color(0xFFE9E9E9),
               contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
             ),
-            style: FlutterFlowTheme.bodyText1.override(
+            style: AmitmodelsTheme.bodyText1.override(
               fontFamily: 'Poppins',
             ),
           ),
@@ -165,12 +168,12 @@ class _SignupformWidgetState extends State<SignupformWidget> {
             obscureText: false,
             decoration: InputDecoration(
               hintText: 'Address',
-              hintStyle: FlutterFlowTheme.bodyText1.override(
+              hintStyle: AmitmodelsTheme.bodyText1.override(
                 fontFamily: 'Poppins',
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -182,7 +185,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -196,21 +199,21 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               fillColor: Color(0xFFE9E9E9),
               contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
             ),
-            style: FlutterFlowTheme.bodyText1.override(
+            style: AmitmodelsTheme.bodyText1.override(
               fontFamily: 'Poppins',
             ),
           ),
           TextFormField(
             controller: txtPasswordController,
-            obscureText: true,
+            obscureText: !passwordVisibility,
             decoration: InputDecoration(
               hintText: 'Password',
-              hintStyle: FlutterFlowTheme.bodyText1.override(
+              hintStyle: AmitmodelsTheme.bodyText1.override(
                 fontFamily: 'Poppins',
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -222,7 +225,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -235,22 +238,33 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               filled: true,
               fillColor: Color(0xFFE9E9E9),
               contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
+              suffixIcon: InkWell(
+                onTap: () => setState(
+                  () => passwordVisibility = !passwordVisibility,
+                ),
+                child: Icon(
+                  passwordVisibility
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
+                  size: 22,
+                ),
+              ),
             ),
-            style: FlutterFlowTheme.bodyText1.override(
+            style: AmitmodelsTheme.bodyText1.override(
               fontFamily: 'Poppins',
             ),
           ),
           TextFormField(
             controller: txtConfirmPasswordController,
-            obscureText: true,
+            obscureText: false,
             decoration: InputDecoration(
               hintText: 'Confirm Password',
-              hintStyle: FlutterFlowTheme.bodyText1.override(
+              hintStyle: AmitmodelsTheme.bodyText1.override(
                 fontFamily: 'Poppins',
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -262,7 +276,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: Color(0x00000000),
                   width: 1,
                 ),
                 borderRadius: BorderRadius.only(
@@ -276,7 +290,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               fillColor: Color(0xFFE9E9E9),
               contentPadding: EdgeInsets.fromLTRB(25, 0, 0, 0),
             ),
-            style: FlutterFlowTheme.bodyText1.override(
+            style: AmitmodelsTheme.bodyText1.override(
               fontFamily: 'Poppins',
             ),
           ),
@@ -294,9 +308,9 @@ class _SignupformWidgetState extends State<SignupformWidget> {
               width: double.infinity,
               height: 50,
               color: Color(0xFF5FC314),
-              textStyle: FlutterFlowTheme.subtitle2.override(
+              textStyle: AmitmodelsTheme.subtitle2.override(
                 fontFamily: 'Poppins',
-                color: FlutterFlowTheme.tertiaryColor,
+                color: AmitmodelsTheme.tertiaryColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w300,
               ),
@@ -314,7 +328,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
             children: [
               AutoSizeText(
                 'Already have an Account?',
-                style: FlutterFlowTheme.bodyText1.override(
+                style: AmitmodelsTheme.bodyText1.override(
                   fontFamily: 'Poppins',
                   color: Color(0xFF5FC314),
                   fontSize: 12,
@@ -333,7 +347,7 @@ class _SignupformWidgetState extends State<SignupformWidget> {
                   },
                   child: AutoSizeText(
                     'Login',
-                    style: FlutterFlowTheme.bodyText1.override(
+                    style: AmitmodelsTheme.bodyText1.override(
                       fontFamily: 'Poppins',
                       color: Color(0xFF479C08),
                       fontSize: 12,
