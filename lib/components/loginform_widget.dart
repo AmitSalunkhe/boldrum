@@ -1,6 +1,10 @@
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:boldrum/login/LoginModel.dart';
+import 'package:page_transition/page_transition.dart';
 import '../amitmodels/amitmodels_theme.dart';
 import '../amitmodels/amitmodels_util.dart';
 import '../amitmodels/amitmodels_widgets.dart';
+import '../api_services.dart';
 import '../home_screen/home_screen_widget.dart';
 import '../reset_password/reset_password_widget.dart';
 import '../signup/signup_widget.dart';
@@ -8,6 +12,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:logger/logger.dart';
 
 class LoginformWidget extends StatefulWidget {
   LoginformWidget({Key key}) : super(key: key);
@@ -15,6 +20,11 @@ class LoginformWidget extends StatefulWidget {
   @override
   _LoginformWidgetState createState() => _LoginformWidgetState();
 }
+
+LoginModel _loginModel = LoginModel();
+var logger = Logger(
+  printer: PrettyPrinter(),
+);
 
 class _LoginformWidgetState extends State<LoginformWidget> {
   TextEditingController txtEmailController;
@@ -141,13 +151,95 @@ class _LoginformWidgetState extends State<LoginformWidget> {
                   ),
                   FFButtonWidget(
                     onPressed: () async {
-                      await Navigator.push(
+                      // ignore: unrelated_type_equality_checks
+                      // var connectivityResult =
+                      //    await (Connectivity().checkConnectivity());
+                      //if (connectivityResult == ConnectivityResult.mobile ||
+                      //    connectivityResult == ConnectivityResult.wifi) {
+                      if (txtEmailController.text.isEmpty) {
+                        Fluttertoast.showToast(
+                          msg: "Please enter username!",
+                          toastLength: Toast.LENGTH_SHORT,
+                          gravity: ToastGravity.BOTTOM,
+                          timeInSecForIosWeb: 1,
+                        );
+                        return;
+                      } else if (txtPasswordController.text.isEmpty) {
+                        Fluttertoast.showToast(
+                          msg: "Please enter password!",
+                          toastLength: Toast.LENGTH_SHORT,
+                          gravity: ToastGravity.BOTTOM,
+                          timeInSecForIosWeb: 1,
+                        );
+                        return;
+                      } else {
+                        //showLoaderDialog(context);
+                        final String email = txtEmailController.text;
+                        final String password = txtPasswordController.text;
+                        LoginModel loginModel =
+                            await APIServices().userLogin(email, password);
+                        setState(() {
+                          _loginModel = loginModel;
+                          Navigator.pop(context);
+                        });
+
+                        if (_loginModel.userid != null) {
+                          String displayToast = "User " +
+                              email +
+                              "logged in with id ${_loginModel.userid}";
+                          Fluttertoast.showToast(
+                            msg: displayToast,
+                            toastLength: Toast.LENGTH_LONG,
+                            gravity: ToastGravity.BOTTOM,
+                            timeInSecForIosWeb: 1,
+                          );
+/* 
+                          () async {
+                            return Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      HomeScreenWidget()));
+                          }; */
+                          await Navigator.pushAndRemoveUntil(
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.fade,
+                              duration: Duration(milliseconds: 300),
+                              reverseDuration: Duration(milliseconds: 300),
+                              child: HomeScreenWidget(),
+                            ),
+                            (r) => false,
+                          );
+                        }
+                        if (_loginModel.userid == null) {
+                          Fluttertoast.showToast(
+                            msg: 'Login Failed! Please check your credentials',
+                            toastLength: Toast.LENGTH_LONG,
+                            gravity: ToastGravity.BOTTOM,
+                            timeInSecForIosWeb: 1,
+                          );
+                          return;
+                        }
+                      }
+                      // }
+                      //  else {
+                      //   print(' not Connected ');
+                      //   Fluttertoast.showToast(
+                      //     msg:
+                      //         "No Internet Connection! Please check your Internet Connection.",
+                      //     toastLength: Toast.LENGTH_SHORT,
+                      //     gravity: ToastGravity.BOTTOM,
+                      //    timeInSecForIosWeb: 1,
+                      //  );
+                      // }
+                    },
+                    /* await Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => HomeScreenWidget(),
                         ),
                       );
-                    },
+                    }, */
                     text: 'Login',
                     options: FFButtonOptions(
                       width: double.infinity,

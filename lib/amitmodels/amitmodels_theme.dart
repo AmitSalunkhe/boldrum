@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+String baseUrl = 'http://boldrum.com.18nplus.live/api/';
+
 // ignore: avoid_classes_with_only_static_members
 class AmitmodelsTheme {
   static const Color primaryColor = Color(0xFFCD151D);
