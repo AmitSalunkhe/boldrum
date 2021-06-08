@@ -287,7 +287,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -347,7 +347,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -407,7 +407,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -467,7 +467,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -527,7 +527,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -587,7 +587,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -647,7 +647,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -707,7 +707,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -780,7 +780,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -840,7 +840,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -900,7 +900,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -960,7 +960,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -1020,7 +1020,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -1080,7 +1080,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -1140,7 +1140,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,
@@ -1200,7 +1200,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget> {
                                     Align(
                                       alignment: Alignment(0, 0),
                                       child: Image.asset(
-                                        'assets/images/↳ 🖼 Image.png',
+                                        'assets/images/SImage.png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.cover,

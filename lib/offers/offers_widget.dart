@@ -17,6 +17,28 @@ class _OffersWidgetState extends State<OffersWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      backgroundColor: AmitmodelsTheme.tertiaryColor,
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Offers',
+                  style: AmitmodelsTheme.title1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }

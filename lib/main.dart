@@ -63,12 +63,22 @@ class _NavBarPageState extends State<NavBarPage> {
               color: Color(0xFF9E9E9E),
               size: 24,
             ),
+            activeIcon: Icon(
+              Icons.grain,
+              color: AmitmodelsTheme.primaryColor,
+              size: 24,
+            ),
             label: 'Menu',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.shopping_bag,
               color: Color(0xFF9E9E9E),
+              size: 24,
+            ),
+            activeIcon: Icon(
+              Icons.shopping_bag_rounded,
+              color: AmitmodelsTheme.primaryColor,
               size: 24,
             ),
             label: 'Offers',
@@ -86,12 +96,22 @@ class _NavBarPageState extends State<NavBarPage> {
               color: Color(0xFF9E9E9E),
               size: 24,
             ),
+            activeIcon: Icon(
+              Icons.person,
+              color: AmitmodelsTheme.primaryColor,
+              size: 24,
+            ),
             label: 'Profile',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.dehaze,
               color: Color(0xFF9E9E9E),
+              size: 24,
+            ),
+            activeIcon: Icon(
+              Icons.dehaze_rounded,
+              color: AmitmodelsTheme.primaryColor,
               size: 24,
             ),
             label: 'More',

@@ -17,6 +17,27 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      backgroundColor: AmitmodelsTheme.tertiaryColor,
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Profile',
+                  style: AmitmodelsTheme.title1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
