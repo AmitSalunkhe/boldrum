@@ -6,12 +6,15 @@ import 'dart:convert';
 //import 'package:farm_unboxed/constants.dart';
 //import 'package:farm_unboxed/shared_preferences.dart';
 import 'package:boldrum/amitmodels/amitmodels_theme.dart';
+import 'package:boldrum/home_screen/home_screen_widget.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
 import 'dart:developer' as developer;
 import 'login/LoginModel.dart';
+import 'home_screen/homeScreenModel.dart';
 
 class APIServices {
   var logger = Logger(
@@ -55,6 +58,46 @@ class APIServices {
       logger.e(decodedData);
       developer.log('loginDetails' + 'decodedData', error: decodedData);
       return LoginModel.fromJson(decodedData);
+    }
+  }
+
+  ////// Dashboard API Services
+
+  Future<DashboardPage> dashboard(String id) async {
+    // http://boldrum.com.18nplus.live/api/user_login
+    http.Response response;
+    response =
+        await http.post(Uri.parse(baseUrl + 'dashboard?id=' + id), headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/x-www-form-urlencoded"
+    }, body: {
+      "id": id,
+    });
+
+    if (response.statusCode == 200) {
+      var decodedData = jsonDecode(response.body);
+      logger.e(decodedData);
+      return DashboardPage.fromJson(decodedData);
+    } else if (response.statusCode == 401) {
+      var decodedData = jsonDecode(response.body);
+      logger.e(decodedData);
+      String errorMessage = decodedData['error']['statusCode'].toString() +
+          "   " +
+          decodedData['error']['code'];
+      logger.i(errorMessage);
+      Fluttertoast.showToast(
+        msg: errorMessage,
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.BOTTOM,
+        timeInSecForIosWeb: 1,
+      );
+      return DashboardPage.fromJson(decodedData);
+    } else {
+      var decodedData = jsonDecode(response.body);
+      print(decodedData);
+      logger.e(decodedData);
+      developer.log('dashboardDetails' + 'decodedData', error: decodedData);
+      return DashboardPage.fromJson(decodedData);
     }
   }
 /* 
